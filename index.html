@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista do mercado</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Lista de Compras</h1>
+    <div class="listas">
+      <h2>Minhas Listas</h2>
+      <button>Nova lista</button>
+      <!--Ao clicar no botão aparece um modal e tu cria o nome da nova lista-->
+    </div>
+    <div class="form">
+      <form>
+        <input type="text" placeholder="Adicione um Item" required />
+        <input
+          type="number"
+          name="qtd"
+          id="qtd"
+          placeholder="Quantidade"
+          min="1"
+          required
+        />
+        <button>Adicionar</button>
+        <ul id="lista"></ul>
+      </form>
+    </div>
+  </body>
+</html>
