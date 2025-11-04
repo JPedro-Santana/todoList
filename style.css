@@ -9,8 +9,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background: url() no-repeat center*/
-    min-height: 50vh;
+    background: url(assets/background.jpg) no-repeat center center/cover;
+    min-height: 100vh;
 }
 
 .container{
@@ -31,7 +31,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    color: #000000;
+    color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
     border: 3px solid rgba(255, 255, 255, 0.18);
@@ -50,14 +50,18 @@ body{
 }
 
 .input-area input{
-    float: 1;
+    flex: 1;
     padding: 10px 17px;
     font-size: 1.1rem;
     outline: none;
     border: none;
     border-radius: 22px;
     background: rgba(255, 194, 209, 0.3);
-    color: #000000;
+    color: #dbdbdb;
+}
+
+.input-area input::placeholder{
+    color: #d4d4d4;
 }
 
 .input-area button{
@@ -125,4 +129,15 @@ body{
 
 #task-list li .checkbox:checked::before{
     content: "\2713";
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+#task-list li span{
+    flex: 2;
+    margin-left: 10px;
+
 }
