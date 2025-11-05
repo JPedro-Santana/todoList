@@ -9,8 +9,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(assets/background.jpg) no-repeat center center/cover;
     min-height: 100vh;
+    background: url(assets/background.jpg) no-repeat center center/cover;
 }
 
 .container{
@@ -221,7 +221,6 @@ body{
 
 .task-buttons button:hover{
     transform: scale(1.1);
-    background: #f3556f;
 }
 
 .task-buttons .edit-btn{

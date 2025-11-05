@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const todoContainer = document.querySelector('.todo-container');
     const progressBar = document.getElementById('progress');
     const progressNumbers = document.getElementById('numbers');
+    const listName = document.getElementById('list-name');
 
     const toggleEmpty = () => {
         lenght === 0 ? 'block' : 'none';
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const saveTasks = () =>{
-        const task = Array.from(taskList.querySelectorAll('li')).map(li => ({
+        const tasks = Array.from(taskList.querySelectorAll('li')).map(li => ({
             text: li.querySelector('span').textContent, completed: li.querySelector('.checkbox').checked
         }));
         localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -43,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProgress();
     }
 
-    const addTask = (text, completed = false, checkCompletion = ture) => {
+    const addTask = (text, completed = false, checkCompletion = true) => {
         const taskText = text || taskInput.value.trim();
-        if(!taskText){
+        if(!taskText){      
             return;
         }
 
@@ -58,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         `;
         
-        const checkbox = li.querySelector('.checkbox')
-        const editBtn = li.querySelector('.edit-btn')
+        const checkbox = li.querySelector('.checkbox');
+        const editBtn = li.querySelector('.edit-btn');
         
         if(completed){
             li.classList.add('completed');
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.classList.toggle('completed', isChecked);
             editBtn.disabled = isChecked;
             editBtn.style.opacity = isChecked ? '0.5' : '1';
-            editBtn.style.pointerEvents = isChecked ? 'none' : auto;
+            editBtn.style.pointerEvents = isChecked ? 'none' : 'auto';
             updateProgress();
             saveTasks();
         });
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addButton.addEventListener('click', () => addTask());
     taskInput.addEventListener('keypress', (e) => {
         if(e.key === 'Enter'){
-            e.preventDefault();
+            e.preventDefault();     
                 addTask();
         }
 
