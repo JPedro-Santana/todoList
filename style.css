@@ -195,13 +195,14 @@ body{
 
 #task-list li.completed span{
     text-decoration: 2px line-through #000;
+    opacity: 0.6;
     color: #000;
 }
 
 .task-buttons{
     display: flex;
     gap: 10px;
-    margin-right: auto;
+    margin-left: auto;
 }
 
 .task-buttons button {

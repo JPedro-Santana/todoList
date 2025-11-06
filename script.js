@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const listName = document.getElementById('list-name');
 
     const toggleEmpty = () => {
-        lenght === 0 ? 'block' : 'none';
         todoContainer.style.width = taskList.children.length > 0 ? '100%' : '50%';
     };
 
@@ -16,16 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalTasks = taskList.children.length;
         const completedTasks = taskList.querySelectorAll('.checkbox:checked').length
         
+        const motivation = document.querySelector('.motivation');
+        const completion = totalTasks ? (completedTasks / totalTasks) * 100 : 0;
         progressBar.style.width = totalTasks ? `${(completedTasks / totalTasks) * 100}%` : '0%'
         progressNumbers.textContent = `${completedTasks} / ${totalTasks}`;
 
-        const motivationalText = document.getElementsByClassName('motivation');
-        if(completedTasks === '50%'){
-            motivationalText.textContent = 'Almost Done';
+        if(completion >= 50 && completion < 100){
+            motivation.textContent = 'Almost Done!';
+        }
+        else if(completion === 100){
+            motivation.textContent = 'Great Job!';
+        }
+        else{
+            motivation.textContent = 'Keep it Up!';
         }
 
         if(checkCompletion && totalTasks > 0 && completedTasks === totalTasks){
-            Confetti();
+            showConfetti();
         }
     };
 
@@ -110,11 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 addTask();
         }
 
-        loadTasks();
     });
+    loadTasks();
 });
 
-const Confetti = () => {
+const showConfetti = () => {
     confetti({
   particleCount: 100,
   spread: 70,
