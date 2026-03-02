@@ -1,24 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="todo-app">
-            <h1>Criar Lista</h1>
-            <form class="input-area">
-                <input type="text" placeholder="Nome da Lista">
-                 <button type="submit" id="add-btn"><i class="fa-solid fa-plus"></i></button>
-            </form>
-            <div class="todo-container">
-                <ul></ul>
-            </div>
+      <div class="todo-app">
+        <h1>Create Lists</h1>
+        <form class="input-area">
+          <input type="text" placeholder="New List Name" />
+          <button type="submit" id="add-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+
+        <div class="todo-container">
+          <ul class="lists-ul"></ul>
         </div>
+      </div>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
