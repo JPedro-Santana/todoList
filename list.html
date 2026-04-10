@@ -4,36 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-        <div class="todo-app">
-          <h1 id="list-name">To-Do List</h1>
-          <div class="stats-container">
-            <div class="details">
-              <h3 class="motivation">Keep it Up!</h3>
-              <div id="progressbar">
-                <div id="progress"></div>
-              </div>
-            </div>
-            <div class="stats-number">
-              <p id="numbers">0 / 0</p>
+      <div class="todo-app">
+        <h1 id="list-name">To-Do List</h1>
+        <div class="stats-container">
+          <div class="details">
+            <h3 class="motivation">Keep it Up!</h3>
+            <div id="progressbar">
+              <div id="progress"></div>
             </div>
           </div>
-            <form class="input-area">
-              <input type="text" id="task-input" placeholder="Add a task">
-              <button type="submit" id="add-btn"><i class="fa-solid fa-plus"></i></button>
-            </form>
-            <div class="todo-container">
-              <ul id="task-list"></ul>
-            </div>
-            <button onclick="window.location.href='home.html'" class="btn-back">
-            ← Back
-          </button>
+          <div class="stats-number">
+            <p id="numbers">0 / 0</p>
+          </div>
         </div>
+        <form class="input-area">
+          <input type="text" id="task-input" placeholder="Add a task" />
+          <button type="submit" id="add-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+        <div class="todo-container">
+          <ul id="task-list"></ul>
+        </div>
+        <button onclick="window.location.href = 'home.html'" class="btn-back">
+          ← Back
+        </button>
       </div>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   <script src="script.js"></script>

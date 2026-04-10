@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const lists = getLists();
 
         if (lists[newName]) {
-          alert("Já existe uma lista com esse nome.");
+          alert("A list with that name already exists.");
           return;
         }
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lists = getLists();
 
     if (lists[name]) {
-      alert("Lista já existe!");
+      alert("List already exists!");
       return;
     }
 
